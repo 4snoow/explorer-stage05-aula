@@ -1,0 +1,186 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color:#121214;
+  --text-color:#ffffff;
+  
+  --primary-color:hsl(var(--base-color), 100%, 63%);
+  --bg-primary-light:hsla(var(--base-color), 100%, 63%, 0.13);
+
+  --base-color:194;
+  
+
+  font-size: 62.5%;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  font-family: 'Roboto', sans-serif;
+
+  display: grid;
+  min-height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+
+
+  background-image: url(./assets/luke-stackpoole-TRXSkmJb40c-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  animation: bg 5s ease infinite;
+
+  
+}
+
+
+button{
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+/*Sumir botões com javascript*/
+.hide{
+  display: none;
+}
+/*Sumir botões*/
+
+.play svg path,
+.pause svg path,
+.sound-on svg path{
+  fill: var(--primary-color);
+}
+
+button svg{
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+main{
+  justify-self: center;
+  align-self: flex-end;
+}
+
+
+footer{
+  justify-self: flex-end;
+  align-self: flex-end;
+
+  padding: 0 4rem 3.2rem 0
+}
+
+
+#timer{
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+  display: flex;
+
+  margin-bottom: 1.6rem;
+}
+
+#controls{
+  background-color: var(--bg-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3.2rem;
+
+  border-radius: 9999px;
+
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vh, 10.8rem);
+
+  
+}
+
+
+
+.barra1{
+
+  border: transparent;
+  background: transparent;
+  box-shadow: 0 0 255px 5px #00c2ff;
+
+  position: absolute;
+
+  
+  width: 100%;
+
+  top: 50%;
+  z-index: -1;
+
+  right: 20%;
+
+  transform: rotate(50deg);
+  animation: rotate 5s linear infinite;
+
+}
+
+.barra2{
+  border: transparent;
+  background: transparent;
+  box-shadow: 0 0 255px 5px #00c2ff;
+
+  position: absolute;
+  width: 100%;
+
+  
+  top: 50%;
+  z-index: -1;
+
+  left: 20%;
+  transform: rotate(50deg);
+
+  
+  animation: rotate2 5s linear infinite;
+}
+
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+
+
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+
+@keyframes rotate2 {
+  0%{
+    transform: rotate(0deg);
+  }
+
+
+  100%{
+    transform: rotate(-360deg);
+  }
+  
+}
+
+
+
+
+@keyframes bg {
+
+0% { background-position: 0% 50%;
+}
+50%{
+  background-position: 100% 50%;
+}
+
+100%{
+  background-position: 0% 50%;
+}
+}
