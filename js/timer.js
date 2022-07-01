@@ -35,7 +35,7 @@ function countDown(){
     }
 
     if(seconds <= 0){
-      seconds = 5
+      seconds = 60
       --minutes 
     } 
 
